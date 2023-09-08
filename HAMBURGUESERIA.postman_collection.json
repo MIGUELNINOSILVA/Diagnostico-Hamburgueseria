@@ -1,0 +1,155 @@
+{
+	"info": {
+		"_postman_id": "895b11a3-a04c-4cac-a20f-61095e8b22c0",
+		"name": "HAMBURGUESERIA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27129339"
+	},
+	"item": [
+		{
+			"name": "GET TODOS LOS INGREDIENTES",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5001/api/ingredientes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"ingredientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET INGREDIENTES STOCK MENOR A 400",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5001/api/ingredientes/less-stock",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"ingredientes",
+						"less-stock"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET HAMBURGUESAS VEGETARIANAS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5001/api/hamburguesas/vegetarian",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"hamburguesas",
+						"vegetarian"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET CHEFS ESPECIALIDAD CARNES",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5001/api/chefs/especial-meet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"chefs",
+						"especial-meet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH AUMENTAR PRECIO INGREDIENTES 1.5",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5001/api/ingredientes/increase-price",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"ingredientes",
+						"increase-price"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET HAMBURGUESAS CHEF B",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5001/api/hamburguesas/hamburguer-chefB",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"hamburguesas",
+						"hamburguer-chefB"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET TODAS LAS CATEGORIAS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5001/api/categorias",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"categorias"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
