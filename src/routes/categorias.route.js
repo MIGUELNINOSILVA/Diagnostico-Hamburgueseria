@@ -1,5 +1,5 @@
 import Router from "express";
-import {findNameAndDescriptionAllCategories} from "../controllers/categorias.controller.js";
+import { findNameAndDescriptionAllCategories } from "../controllers/categorias.controller.js";
 
 const categoria = Router();
 

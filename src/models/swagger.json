@@ -1,0 +1,235 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "HAMBURGER API DOCUMENTATION",
+    "version": "1.0.0",
+    "description": "Documentation for the API endpoints."
+  },
+  "servers": [
+    {
+      "url": "http://localhost:5001",
+      "description": "Development server"
+    }
+  ],
+  "paths": {
+    "/api/ingredientes":{
+      "get": {
+        "summary": "Obtener todos los ingredientes",
+        "description": "Obtiene una lista con todos los ingredientes",
+        "tags": ["Ingredientes"],
+        "responses": {
+          "200": {
+            "description": "Operación exitosa",
+            "content":{
+              "application/json": {
+                "schema":{
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Ingredientes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ingredientes/less-stock":{
+      "get": {
+        "summary": "Obtener todos los ingredientes de un stock menor",
+        "description": "Obtiene una lista con todos los ingredientes menores en el stock",
+        "tags": ["Ingredientes"],
+        "responses": {
+          "200": {
+            "description": "Operación exitosa",
+            "content":{
+              "application/json": {
+                "schema":{
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Ingredientes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ingredientes/increase-price":{
+      "patch": {
+        "summary": "Aumenta el precio de los ingredientes",
+        "description": "Obtiene una lista con todos los ingredientes menores en el stock",
+        "tags": ["Ingredientes"],
+        "responses": {
+          "200": {
+            "description": "Operación exitosa",
+            "content":{
+              "application/json": {
+                "schema":{
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Ingredientes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/categorias":{
+      "get": {
+        "summary": "Obtener todas las Categorias",
+        "description": "Obtiene una lista con todos las categorias, nombre y descripcion",
+        "tags": ["Categorias"],
+        "responses": {
+          "200": {
+            "description": "Operación exitosa",
+            "content":{
+              "application/json": {
+                "schema":{
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Categorias"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/chefs/especial-meet":{
+      "get": {
+        "summary": "Obtener todos los chefs especialidad Carne",
+        "description": "Obtiene una lista con todos los chefs,con especialidad carne",
+        "tags": ["Chefs"],
+        "responses": {
+          "200": {
+            "description": "Operación exitosa",
+            "content":{
+              "application/json": {
+                "schema":{
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Chefs"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/hamburguesas/vegetarian":{
+      "get": {
+        "summary": "Obtener todos las hamburguesas Vegetarianas",
+        "description": "Obtiene una lista con todos los hamburguesas,las vegetariasnas",
+        "tags": ["Hamburguesas"],
+        "responses": {
+          "200": {
+            "description": "Operación exitosa",
+            "content":{
+              "application/json": {
+                "schema":{
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Hamburguesas"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/hamburguesas/hamburguer-chefB":{
+      "get": {
+        "summary": "Obtener todos las hamburguesas ChefB",
+        "description": "Obtiene una lista con todos los hamburguesas,todas las preparadas por el chef B",
+        "tags": ["Hamburguesas"],
+        "responses": {
+          "200": {
+            "description": "Operación exitosa",
+            "content":{
+              "application/json": {
+                "schema":{
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Hamburguesas"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+  },
+  "components":{
+    "schemas":{
+      "Ingredientes":{
+        "type": "object",
+        "properties": {
+          "nombre":{
+            "type":"string"
+          },
+          "descripcion":{
+            "type": "string"
+          },
+          "precio":{
+            "type": "number"
+          },
+          "stock":{
+            "type": "number"
+          }
+        }
+      },
+      "Categorias":{
+        "type": "object",
+        "properties": {
+          "nombre":{
+            "type":"string"
+          },
+          "descripcion":{
+            "type": "string"
+          }
+        }
+      },
+      "Chefs":{
+        "type": "object",
+        "properties": {
+          "nombre":{
+            "type":"string"
+          },
+          "especialidad":{
+            "type": "string"
+          }
+        }
+      },
+      "Hamburguesas":{
+        "type": "object",
+        "properties": {
+          "nombre":{
+            "type":"string"
+          },
+          "categoria":{
+            "type": "string"
+          },
+          "ingredientes":{
+            "type": "array"
+          },
+          "precio":{
+            "type": "number"
+          },
+          "chef":{
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+
+}
